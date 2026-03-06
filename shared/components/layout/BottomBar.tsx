@@ -208,24 +208,26 @@ const MobileBottomBar = () => {
       </div>
 
       <div className='flex items-center gap-2 text-xs text-(--secondary-color)'>
-        <span
+        <button
+          type='button'
           className='hidden text-xs text-(--secondary-color) hover:cursor-pointer hover:text-(--main-color) lg:inline-block'
           onClick={() => handleClick('https://ko-fi.com/kanadojo')}
         >
           made with ❤️ by the community
-        </span>
+        </button>
         <span className='hidden text-sm text-(--secondary-color) select-none lg:inline-block'>
           ~
         </span>
         {infoItems.map((item, idx) => {
           const content = (
-            <span
+            <button
+              type='button'
               className='flex gap-1 hover:cursor-pointer hover:text-(--main-color)'
               onClick={item.onClick}
             >
               <item.icon size={16} />
               {item.text}
-            </span>
+            </button>
           );
 
           return (
